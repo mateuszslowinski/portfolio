@@ -31,6 +31,10 @@ export const TechnologyContainer = styled.div`
 
   & p {
     font-size: 1.4rem;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
   }
 
   & img {
