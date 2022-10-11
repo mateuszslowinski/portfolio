@@ -4,7 +4,7 @@ import {HomePage} from "./pages/Home/Home.page";
 import {Navbar} from "./components/Navbar/Navbar";
 import {Layout} from "./components/Layout/Layout";
 import {Footer} from "./components/Footer/Footer";
-import {Technology} from "./components/Technology/Technology";
+import {TechnologyPage} from "./pages/Technology/Technology.page";
 
 export const App = () => {
     const header = <Navbar/>
@@ -13,7 +13,7 @@ export const App = () => {
     const content = (
         <Routes>
             <Route path='/' element={<HomePage/>}/>
-            <Route path='/technologie' element={<Technology/>}/>
+            <Route path='/technologie' element={<TechnologyPage/>}/>
         </Routes>
     )
 
