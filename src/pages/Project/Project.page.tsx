@@ -13,6 +13,7 @@ export const ProjectPage = () => (
                 description={project.description}
                 links={project.links}
                 demo={project.demo}
+                info={project.info}
             />
         ))}
     </ProjectContainer>

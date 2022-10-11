@@ -1,6 +1,6 @@
 export const ProjectData = [
     {
-        name:'TeaShop',
+        name:'Tea Shop',
         image:'/images/projectImages/TeaShop.png',
         description:'opis jakis tam',
         demo:{
@@ -16,6 +16,29 @@ export const ProjectData = [
                 url:'https://github.com/mateuszslowinski/teaShop-backend',
             }
         ],
+    },
+    {
+        name:'Mega Books',
+        image:'/images/projectImages/BookWorld.png',
+        description:'opis dla ksiażek',
+
+        links:[
+            {
+                name:'frontend',
+                url:'https://github.com/mateuszslowinski/megakBooksFront',
+            },
+            {
+                name:'backend',
+                url:'https://github.com/mateuszslowinski/megakBooksBack',
+            }
+        ],
+    },
+    {
+        name:'Giereczkowo',
+        image:'/images/projectImages/Games-projekt.png',
+        description:'opis dla gier',
+        info:'Prace trwają'
+
     },
 
 ]
