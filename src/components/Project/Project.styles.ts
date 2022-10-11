@@ -24,7 +24,9 @@ export const ProjectDetails = styled.div`
     font-size: 1.5rem;
     margin: 5px;
   }
-  
+  & img{
+    width: 200px;
+  }
   & p {
     margin: 5px;
     font-size: 1.3rem;
