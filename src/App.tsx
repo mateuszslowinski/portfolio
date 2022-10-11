@@ -5,6 +5,7 @@ import {Navbar} from "./components/Navbar/Navbar";
 import {Layout} from "./components/Layout/Layout";
 import {Footer} from "./components/Footer/Footer";
 import {TechnologyPage} from "./pages/Technology/Technology.page";
+import {ProjectPage} from "./pages/Project/Project.page";
 
 export const App = () => {
     const header = <Navbar/>
@@ -13,6 +14,7 @@ export const App = () => {
     const content = (
         <Routes>
             <Route path='/' element={<HomePage/>}/>
+            <Route path='/projekty' element={<ProjectPage/>}/>
             <Route path='/technologie' element={<TechnologyPage/>}/>
         </Routes>
     )
