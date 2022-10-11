@@ -3,10 +3,11 @@ import {Route, Routes} from 'react-router-dom';
 import {HomePage} from "./pages/Home/Home.page";
 import {Navbar} from "./components/Navbar/Navbar";
 import {Layout} from "./components/Layout/Layout";
+import {Footer} from "./components/Footer/Footer";
 
 export const App = () => {
     const header = <Navbar/>
-    const footer = <div>footer</div>
+    const footer = <Footer/>
 
     const content = (
         <Routes>
