@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const TechnologyContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  margin-top: 20px;
   padding: 5px;
+  min-height: calc(100vh - 110px);
 
   & > div {
     margin: 10px;
@@ -18,8 +18,7 @@ export const TechnologyContainer = styled.div`
     font-size: 3.5rem;
     margin: 10px;
     padding: 10px;
-    background-color: #4D4D4D;
-    color: #F7F7F7;
+    color: #0B8BD4;
     text-transform: uppercase;
   }
 

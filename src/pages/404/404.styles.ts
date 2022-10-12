@@ -4,8 +4,10 @@ import styled from "styled-components";
 export const Page404Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  min-height: calc(100vh - 110px);
+
 
   & h1 {
     margin-top: 40px;
