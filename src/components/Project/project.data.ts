@@ -2,14 +2,14 @@ export const ProjectData = [
     {
         name: 'Giereczkowo',
         image: '/images/projectImages/Games-projekt.png',
-        description: 'opis dla gier',
+        description: 'Aplikacja będzie ukazywać historie produkcji wydanych na poszczególne konsole.',
         info: 'Prace trwają'
 
     },
     {
         name: 'Tea Shop',
         image: '/images/projectImages/TeaShop.png',
-        description: 'opis jakis tam',
+        description: 'Aplikacja mająca na celu imitować sklep z herbatami. Z funkcja składania zamówienia, przeglądania historii swoich zamówień oraz z możliwością zapisania się do newsletteru.',
         demo: {
             url: 'https://tea-shop-front.herokuapp.com',
         },
@@ -27,7 +27,7 @@ export const ProjectData = [
     {
         name: 'Mega Books',
         image: '/images/projectImages/BookWorld.png',
-        description: 'opis dla ksiażek',
+        description: 'Aplikacja do zarządzania swojej historii swoich przeczytanych książek, posiada moduł rejestracji i logowania oraz przypisywania kolekcji książek do każdego użytkownika.',
 
         links: [
             {
