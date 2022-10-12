@@ -1,44 +1,43 @@
 export const ProjectData = [
     {
-        name:'Tea Shop',
-        image:'/images/projectImages/TeaShop.png',
-        description:'opis jakis tam',
-        demo:{
-            url:'https://tea-shop-front.herokuapp.com',
+        name: 'Giereczkowo',
+        image: '/images/projectImages/Games-projekt.png',
+        description: 'opis dla gier',
+        info: 'Prace trwają'
+
+    },
+    {
+        name: 'Tea Shop',
+        image: '/images/projectImages/TeaShop.png',
+        description: 'opis jakis tam',
+        demo: {
+            url: 'https://tea-shop-front.herokuapp.com',
         },
-        links:[
+        links: [
             {
-                name:'frontend',
-                url:'https://github.com/mateuszslowinski/teaShopFront',
+                name: 'Frontend',
+                url: 'https://github.com/mateuszslowinski/teaShopFront',
             },
             {
-                name:'backend',
-                url:'https://github.com/mateuszslowinski/teaShop-backend',
+                name: 'Backend',
+                url: 'https://github.com/mateuszslowinski/teaShop-backend',
             }
         ],
     },
     {
-        name:'Mega Books',
-        image:'/images/projectImages/BookWorld.png',
-        description:'opis dla ksiażek',
+        name: 'Mega Books',
+        image: '/images/projectImages/BookWorld.png',
+        description: 'opis dla ksiażek',
 
-        links:[
+        links: [
             {
-                name:'frontend',
-                url:'https://github.com/mateuszslowinski/megakBooksFront',
+                name: 'Frontend',
+                url: 'https://github.com/mateuszslowinski/megakBooksFront',
             },
             {
-                name:'backend',
-                url:'https://github.com/mateuszslowinski/megakBooksBack',
+                name: 'Backend',
+                url: 'https://github.com/mateuszslowinski/megakBooksBack',
             }
         ],
     },
-    {
-        name:'Giereczkowo',
-        image:'/images/projectImages/Games-projekt.png',
-        description:'opis dla gier',
-        info:'Prace trwają'
-
-    },
-
 ]

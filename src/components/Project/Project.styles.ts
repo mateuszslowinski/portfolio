@@ -8,34 +8,42 @@ export const ProjectContainer = styled.div`
 
   & h2 {
     font-size: 3.5rem;
-    margin: 5px;
+    margin: 10px;
+  }
+  & div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 `
 
 export const ProjectDetails = styled.div`
+  width: 40%;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  margin: 10px;
   border: 1px solid #CFCFCF;
   box-shadow: 0 0 38px -5px rgba(67, 67, 70, 1);
 
   & h3 {
-    font-size: 1.5rem;
-    margin: 5px;
+    font-size: 1.7rem;
+    margin: 10px 0 ;
   }
   & img{
-    width: 200px;
+    width: 300px;
   }
   & p {
-    margin: 5px;
+    margin: 10px;
     font-size: 1.3rem;
-    padding: 5px;
   }
 `
 
 export const LinksContainer = styled.div`
   display: flex;
+  margin-bottom: 20px;
 
   & > div {
     display: flex;

@@ -24,7 +24,7 @@ export const ProjectCard = ({name, image, description, links, demo,info}: Props)
                 {links?.map(link => (
                     <div>{link.name} <a href={link.url} target="_blank"><AiFillGithub/></a></div>
                 ))}
-                {demo && <div>demo<a href={demo.url} target="_blank"><BsEyeFill/></a></div>}
+                {demo && <div>Demo<a href={demo.url} target="_blank"><BsEyeFill/></a></div>}
                 {info && <div>{info}</div>}
             </LinksContainer>
         </ProjectDetails>
