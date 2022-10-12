@@ -5,11 +5,12 @@ export const ProjectContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 110px);
 
 
   & h2 {
     font-size: 3.5rem;
+    color: #0B8BD4;
     margin: 10px;
   }
   & div {

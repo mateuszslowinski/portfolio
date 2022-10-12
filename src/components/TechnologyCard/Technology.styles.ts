@@ -18,8 +18,7 @@ export const TechnologyContainer = styled.div`
     font-size: 3.5rem;
     margin: 10px;
     padding: 10px;
-    background-color: #4D4D4D;
-    color: #F7F7F7;
+    color: #0B8BD4;
     text-transform: uppercase;
   }
 
