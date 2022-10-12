@@ -3,8 +3,10 @@ import styled from "styled-components";
 export const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  min-height: calc(100vh - 100px);
+
 
   & h2 {
     font-size: 3.5rem;

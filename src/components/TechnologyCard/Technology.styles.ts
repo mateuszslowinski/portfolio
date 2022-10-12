@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const TechnologyContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  margin-top: 20px;
   padding: 5px;
+  min-height: calc(100vh - 110px);
 
   & > div {
     margin: 10px;
