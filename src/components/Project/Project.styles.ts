@@ -39,8 +39,9 @@ export const ProjectDetails = styled.div`
     width: 300px;
   }
   & p {
-    margin: 10px;
-    font-size: 1.3rem;
+    margin: 15px 10px 10px;
+    font-size: 1.2rem;
+    padding: 0 20px;
   }
 `
 
