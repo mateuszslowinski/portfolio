@@ -37,6 +37,7 @@ export const ProjectDetails = styled.div`
   }
   & img{
     width: 300px;
+    cursor: pointer;
   }
   & p {
     margin: 15px 10px 10px;
