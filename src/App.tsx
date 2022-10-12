@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Route, Routes} from 'react-router-dom';
+import {HomePage} from "./pages/Home/Home.page";
+import {Navbar} from "./components/Navbar/Navbar";
+import {Layout} from "./components/Layout/Layout";
+import {Footer} from "./components/Footer/Footer";
+import {TechnologyPage} from "./pages/Technology/Technology.page";
+import {ProjectPage} from "./pages/Project/Project.page";
+import {Page404} from "./pages/404/404.page";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export const App = () => {
+    const header = <Navbar/>
+    const footer = <Footer/>
+
+    const content = (
+        <Routes>
+            <Route path='/' element={<HomePage/>}/>
+            <Route path='/projekty' element={<ProjectPage/>}/>
+            <Route path='/technologie' element={<TechnologyPage/>}/>
+            <Route path='*' element={<Page404/>}/>
+        </Routes>
+    )
+
+    return (
+        <Layout
+            header={header}
+            content={content}
+            footer={footer}
+        />
+    );
 }
-
-export default App;

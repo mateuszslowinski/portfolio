@@ -1,0 +1,2 @@
+export const introduction = 'Witam na stronie mojego portfolio. Jestem początkującym javascript deweloperem, który stale' +
+    ' rozwija swoje umiejętności z zakresu tworzenia aplikacji po stronie frontendu jak i backendu.'
