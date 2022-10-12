@@ -1,6 +1,7 @@
+import {Home} from "../../components/Home/Home";
 
-export const HomePage = () => {
-    return (
-            <div>home page</div>
-    )
-}
+export const HomePage = () => (
+    <>
+        <Home/>
+    </>
+)
