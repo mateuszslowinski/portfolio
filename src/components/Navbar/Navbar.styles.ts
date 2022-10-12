@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavbarContainer = styled.div`
-  width: 90%;
+  width: 100%;
   background-color: #0B8BD4;
   margin: 0 auto;
   padding: 10px;
@@ -16,9 +16,10 @@ export const NavbarContainer = styled.div`
     align-items: center;
     padding: 0 10px;
   }
-
-  & svg {
-    font-size: 2rem;
+ 
+  
+  & img{
+    width: 50px;
   }
 
   & ul {
@@ -32,6 +33,9 @@ export const NavbarContainer = styled.div`
   }
 
   & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.6rem;
     text-decoration: none;
     transition: 0.8s;
