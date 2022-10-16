@@ -4,14 +4,12 @@ import {device} from "../../constants/mediaQueries";
 export const HomePageContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 100%;
   min-height: calc(100vh - 110px);
 
   ${device.desktop} {
     flex-wrap: nowrap;
-    padding: 10px;
   }
 `
 
@@ -98,7 +96,6 @@ export const AsideContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   background: transparent;
-
 
   & svg {
     height: 300px;
