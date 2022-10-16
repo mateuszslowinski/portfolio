@@ -1,11 +1,13 @@
 import styled from "styled-components";
+import {device} from "../../constants/mediaQueries";
 
 export const NavbarContainer = styled.div`
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   background-color: #0B8BD4;
-  margin: 0 auto;
-  padding: 10px;
-  
+  padding: 5px;
+
   & ul, li, a, div, svg {
     background-color: transparent;
   }
@@ -13,18 +15,23 @@ export const NavbarContainer = styled.div`
   & > div {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    width: 100%;
     padding: 0 10px;
   }
- 
-  
-  & img{
-    width: 50px;
+
+  & img {
+    width: 40px;
+    height: 30px;
+
+    ${device.desktop} {
+      width: 50px;
+      height: 40px;
+    }
   }
 
   & ul {
     display: flex;
-    width: 25%;
+    align-items: center;
     list-style: none;
   }
 

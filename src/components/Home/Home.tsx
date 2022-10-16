@@ -1,12 +1,12 @@
+import {NavLink} from 'react-router-dom';
+import {HomeSvg} from "./Svgs/ Home.svg";
 import {BsEmojiSmileFill} from 'react-icons/bs'
-import {AsideContainer, DetailsContainer, HomePageContainer} from "./Home.styles";
 import {MdDirectionsBike} from 'react-icons/md';
 import {FaChess} from 'react-icons/fa'
 import {IoGameController} from 'react-icons/io5'
 import {VscBook} from 'react-icons/vsc'
-import {HomeSvg} from "./Svgs/ Home.svg";
 import {introduction} from "../../constants/description";
-import {NavLink} from 'react-router-dom';
+import {AsideContainer, DetailsContainer, HomePageContainer} from "./Home.styles";
 
 export const Home = () => {
     return (
