@@ -1,8 +1,8 @@
-import {LinksContainer, ProjectDetails} from "./Project.styles";
-import {AiFillGithub} from "react-icons/ai";
-import {BsEyeFill} from "react-icons/bs";
 import {useState} from "react";
 import {ImageModal} from "../Modal/ImageModal";
+import {AiFillGithub} from "react-icons/ai";
+import {BsEyeFill} from "react-icons/bs";
+import {LinksContainer, ProjectDetails} from "./Project.styles";
 
 interface Props {
     name: string
@@ -13,7 +13,6 @@ interface Props {
     info?: string
 
 }
-
 
 export const ProjectCard = ({name, image, description, links, demo, info}: Props) => {
     const [clickedImg, setClickedImg] = useState('')

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {device} from "../../constants/mediaQueries";
 
 export const ImageModalContainer = styled.div`
   position: absolute;
@@ -6,11 +7,15 @@ export const ImageModalContainer = styled.div`
 
   & img {
     position: fixed;
-    width: 80vw;
+    width: 100vw;
     height: 80vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    ${device.tablet} {
+      width: 80vw;
+    }
   }
 
   & button {

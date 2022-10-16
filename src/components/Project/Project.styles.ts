@@ -1,10 +1,13 @@
 import styled from "styled-components";
+import {device} from "../../constants/mediaQueries";
 
 export const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
   min-height: calc(100vh - 110px);
 
 
@@ -22,15 +25,20 @@ export const ProjectContainer = styled.div`
 `
 
 export const ProjectDetails = styled.div`
-  width: 40%;
-  min-height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   margin: 10px;
   border: 1px solid #CFCFCF;
   box-shadow: 0 0 38px -5px rgba(67, 67, 70, 1);
-
+  
+  ${device.tablet} {
+    width: 40%;
+    min-height: 350px;
+  }
+  
+  
   & h3 {
     font-size: 1.7rem;
     margin: 10px 0 ;
