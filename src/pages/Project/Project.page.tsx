@@ -14,6 +14,7 @@ export const ProjectPage = () => (
         <div>
             {ProjectData.map(project => (
                 <ProjectCard
+                    key={project.image}
                     name={project.name}
                     image={project.image}
                     description={project.description}
