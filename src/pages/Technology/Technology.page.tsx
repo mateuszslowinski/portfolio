@@ -5,10 +5,10 @@ import {TechnologyCard} from "../../components/TechnologyCard/TechnologyCard";
 
 export const TechnologyPage = () => (
     <TechnologyContainer
-        initial={{y: "100%"}}
-        animate={{y: "0%"}}
+        initial={{width: "0"}}
+        animate={{width: "100%"}}
         exit={{opacity: 1}}
-        transition={{duration: 0.4, ease: 'easeOut'}}
+        transition={{duration: .5, ease: 'easeOut'}}
     >
         <h2>Poznane technologie</h2>
         <div>
