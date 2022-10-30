@@ -1,19 +1,35 @@
-import {BsEmojiSmileFill} from 'react-icons/bs'
-import {AsideContainer, DetailsContainer, HomePageContainer} from "./Home.styles";
+import {NavLink} from 'react-router-dom';
+import {HomeSvg} from "./Svgs/ Home.svg";
 import {MdDirectionsBike} from 'react-icons/md';
 import {FaChess} from 'react-icons/fa'
 import {IoGameController} from 'react-icons/io5'
 import {VscBook} from 'react-icons/vsc'
-import {HomeSvg} from "./Svgs/ Home.svg";
 import {introduction} from "../../constants/description";
-import {NavLink} from 'react-router-dom';
+import {AsideContainer, DetailsContainer, HomePageContainer} from "./Home.styles";
+import {useEffect, useState} from "react";
 
 export const Home = () => {
+    const [text, setText] = useState<string>('');
+    const chars = ' Witaj, jestem Mateusz'.split('');
+
+    useEffect(() => {
+        setTimeout(() => {
+            const timer = setTimeout(() => {
+                setText((prevText) => {
+                    if (prevText.length !== chars.length) {
+                       return prevText.concat(chars[prevText.length])
+                    }
+                    return prevText
+                })
+            }, 500)
+            return () => clearTimeout(timer)
+        })
+    })
+
     return (
         <HomePageContainer>
             <DetailsContainer>
-                <h1>Witaj <BsEmojiSmileFill/></h1>
-                <h2>Nazywam się Mateusz </h2>
+                <h1>{text}</h1>
                 <h3>{introduction}</h3>
                 <p>Oprócz programowania lubię spędzać wolny czas jeżdżąc <MdDirectionsBike/> czytając <VscBook/>
                     grając <IoGameController/>

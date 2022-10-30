@@ -1,16 +1,23 @@
+import {motion} from "framer-motion";
 import styled from "styled-components";
+import {device} from "../../constants/mediaQueries";
 
-export const ImageModalContainer = styled.div`
-  position: absolute;
-  width: 80vw;
+export const ImageModalContainer = styled(motion.div)`
+  position: fixed;
 
   & img {
     position: fixed;
-    width: 80vw;
-    height: 80vh;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+
+    ${device.tablet} {
+      width: 80vw;
+      top: 45%;
+      left: 50%;
+    }
   }
 
   & button {
@@ -23,16 +30,14 @@ export const ImageModalContainer = styled.div`
     border: none;
     color: red;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
     transition: .6s;
     background: transparent;
-
+    overflow: hidden;
+    
     &:hover {
       font-size: 7rem;
       transform: rotate(360deg);
     }
   }
-
-  overflow: hidden;
-
 `
