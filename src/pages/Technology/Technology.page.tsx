@@ -4,7 +4,12 @@ import {TechnologyCard} from "../../components/TechnologyCard/TechnologyCard";
 
 
 export const TechnologyPage = () => (
-    <TechnologyContainer>
+    <TechnologyContainer
+        initial={{y: "100%"}}
+        animate={{y: "0%"}}
+        exit={{opacity: 1}}
+        transition={{duration: 0.4, ease: 'easeOut'}}
+    >
         <h2>Poznane technologie</h2>
         <div>
             <h3>Jezyki Programowania</h3>
