@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import {device} from "../../constants/mediaQueries";
+import {motion} from "framer-motion";
 
-export const TechnologyContainer = styled.div`
+export const TechnologyContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

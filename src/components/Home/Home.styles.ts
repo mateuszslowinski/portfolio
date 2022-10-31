@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {device} from "../../constants/mediaQueries";
+import {GlobalThemeProps} from "../../types/layout.types";
 
 export const HomePageContainer = styled.div`
   display: flex;
@@ -26,24 +27,26 @@ export const DetailsContainer = styled.div`
     font-size: 4.5rem;
     color: #0B8BD4;
 
+    &:after {
+      content: "|";
+      color: ${({ theme }: GlobalThemeProps) => theme.fontColor};
+      animation: cursor .8s infinite;
+    }
+
     ${device.desktop} {
       font-size: 5rem;
     }
 
-    & svg {
-      font-size: 3.5rem;
+    @keyframes cursor {
+      0%, 30% {
+        opacity: 0;
+      }
+      70%, 100% {
+        opacity: 1;
+      }
     }
   }
 
-  & h2 {
-    font-size: 3.0rem;
-    color: #0B8BD4;
-    margin-bottom: 20px;
-
-    ${device.desktop} {
-      font-size: 3.5rem;
-    }
-  }
 
   & h3 {
     font-size: 1.7rem;
@@ -64,13 +67,9 @@ export const DetailsContainer = styled.div`
     }
 
     & svg {
-      margin: 5px 5px 0 0
+      margin: 5px 5px 0 0;
+      font-size: 2rem;
     }
-  }
-
-
-  & svg {
-    font-size: 2rem;
   }
 
   & div {
@@ -82,11 +81,11 @@ export const DetailsContainer = styled.div`
       font-size: 2rem;
       border: 1px solid #0B8BD4;
       text-decoration: none;
-      transition: .7s;
+      transition: .8s;
 
       &:hover {
-        color: #222224;
-        background-color: ivory;
+        color: ${({ theme }: GlobalThemeProps) => theme.backGroundColor};
+        background-color: ${({ theme }: GlobalThemeProps) => theme.fontColor};
       }
     }
   }
@@ -107,7 +106,6 @@ export const AsideContainer = styled.div`
 
     & g #first {
       animation: move 5s ease 1s infinite;
-
     }
 
     & g #third {
@@ -122,7 +120,6 @@ export const AsideContainer = styled.div`
       animation: move 5s ease 1s infinite;
     }
   }
-
 
   @keyframes move {
     0% {

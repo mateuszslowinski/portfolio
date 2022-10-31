@@ -4,13 +4,18 @@ import {TechnologyCard} from "../../components/TechnologyCard/TechnologyCard";
 
 
 export const TechnologyPage = () => (
-    <TechnologyContainer>
+    <TechnologyContainer
+        initial={{width: "0"}}
+        animate={{width: "100%"}}
+        exit={{opacity: 1}}
+        transition={{duration: .5, ease: 'easeOut'}}
+    >
         <h2>Poznane technologie</h2>
         <div>
             <h3>Jezyki Programowania</h3>
             <ImagesContainer>
                 {technologyData.language.map(item => (
-                    <TechnologyCard name={item.name} image={item.image}/>
+                    <TechnologyCard key={item.image} name={item.name} image={item.image}/>
                 ))}
             </ImagesContainer>
         </div>
@@ -18,7 +23,7 @@ export const TechnologyPage = () => (
             <h3>Frontend</h3>
             <ImagesContainer>
                 {technologyData.frontend.map(item => (
-                    <TechnologyCard name={item.name} image={item.image}/>
+                    <TechnologyCard key={item.image} name={item.name} image={item.image}/>
                 ))}
             </ImagesContainer>
         </div>
@@ -26,7 +31,7 @@ export const TechnologyPage = () => (
             <h3>Backend</h3>
             <ImagesContainer>
                 {technologyData.backend.map(item => (
-                    <TechnologyCard name={item.name} image={item.image}/>
+                    <TechnologyCard key={item.image} name={item.name} image={item.image}/>
                 ))}
             </ImagesContainer>
         </div>
@@ -34,7 +39,7 @@ export const TechnologyPage = () => (
             <h3>Bazy danych</h3>
             <ImagesContainer>
                 {technologyData.database.map(item => (
-                    <TechnologyCard name={item.name} image={item.image}/>
+                    <TechnologyCard key={item.image} name={item.name} image={item.image}/>
                 ))}
             </ImagesContainer>
         </div>
