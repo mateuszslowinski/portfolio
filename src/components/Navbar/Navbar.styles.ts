@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {device} from "../../constants/mediaQueries";
+import {GlobalThemeProps} from "../../types/layout.types";
 
 export const NavbarContainer = styled.div`
   display: flex;
@@ -48,7 +49,9 @@ export const NavbarContainer = styled.div`
     transition: 0.8s;
 
     &:hover {
-      color: #222224;
+      color: ${({ theme }: GlobalThemeProps) => theme.hoverColors};
+      background-color:whitesmoke;
+      padding: 5px;
     }
   }
 
