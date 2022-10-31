@@ -1,16 +1,16 @@
 import React, {ReactNode, useState} from "react";
-import {LayoutContainer, PageContainer} from "./Layout.styles";
+import {Navbar} from "../Navbar/Navbar";
 import {ThemeProvider} from "styled-components";
-import {GlobalStyles,} from "../../GlobalStyles";
 import {darkTheme, lightTheme} from "../../constants/themes";
+import {LayoutContainer, PageContainer} from "./Layout.styles";
+import {GlobalStyles,} from "../../GlobalStyles";
 
 interface Props {
-    header: ReactNode
     content: ReactNode
     footer: ReactNode
 }
 
-export const Layout = ({header, content, footer}: Props) => {
+export const Layout = ({content, footer}: Props) => {
     const [theme, setTheme] = useState('dark')
 
     const themeToggle = () => {
@@ -21,7 +21,7 @@ export const Layout = ({header, content, footer}: Props) => {
         <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
             <GlobalStyles/>
             <LayoutContainer>
-                <div>{header}</div>
+                <Navbar onClick={themeToggle} theme={theme}/>
                 <PageContainer>{content}</PageContainer>
                 <div>{footer}</div>
             </LayoutContainer>
