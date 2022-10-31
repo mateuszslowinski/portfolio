@@ -29,7 +29,7 @@ export const DetailsContainer = styled.div`
 
     &:after {
       content: "|";
-      color: whitesmoke;
+      color: ${({ theme }: GlobalThemeProps) => theme.fontColor};
       animation: cursor .8s infinite;
     }
 
