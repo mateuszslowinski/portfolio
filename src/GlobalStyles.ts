@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import {GlobalThemeProps} from "./types/layout.types";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -8,8 +9,8 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-family: Karla, sans-serif;
     font-size: 10px;
-    background-color: #222224;
-    color: whitesmoke;
+    background-color:${({ theme }: GlobalThemeProps) => theme.backGroundColor};
+    color: ${({ theme }: GlobalThemeProps) => theme.fontColor};
     scroll-behavior: smooth;
   }
 

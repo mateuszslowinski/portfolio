@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {device} from "../../constants/mediaQueries";
+import {GlobalThemeProps} from "../../types/layout.types";
 
 export const HomePageContainer = styled.div`
   display: flex;
@@ -28,7 +29,7 @@ export const DetailsContainer = styled.div`
 
     &:after {
       content: "|";
-      color: whitesmoke;
+      color: ${({ theme }: GlobalThemeProps) => theme.fontColor};
       animation: cursor .8s infinite;
     }
 
@@ -83,8 +84,8 @@ export const DetailsContainer = styled.div`
       transition: .8s;
 
       &:hover {
-        color: #222224;
-        background-color: ivory;
+        color: ${({ theme }: GlobalThemeProps) => theme.backGroundColor};
+        background-color: ${({ theme }: GlobalThemeProps) => theme.fontColor};
       }
     }
   }

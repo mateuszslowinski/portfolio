@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {device} from "../../constants/mediaQueries";
+import {GlobalThemeProps} from "../../types/layout.types";
 
 export const NavbarContainer = styled.div`
   display: flex;
@@ -7,6 +8,10 @@ export const NavbarContainer = styled.div`
   flex-wrap: wrap;
   background-color: #0B8BD4;
   padding: 5px;
+
+  & div > a:hover {
+    padding: 0;
+  }
 
   & ul, li, a, div, svg {
     background-color: transparent;
@@ -17,6 +22,7 @@ export const NavbarContainer = styled.div`
     justify-content: space-between;
     width: 100%;
     padding: 0 10px;
+
   }
 
   & img {
@@ -47,9 +53,15 @@ export const NavbarContainer = styled.div`
     text-decoration: none;
     transition: 0.8s;
 
+
     &:hover {
-      color: #222224;
+      color: ${({theme}: GlobalThemeProps) => theme.hoverColors};
+      background-color: whitesmoke;
+      padding: 5px;
     }
   }
 
+  & svg {
+    font-size: 2.5rem;
+  }
 `
