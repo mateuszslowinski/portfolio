@@ -19,6 +19,7 @@ export const ProjectPage = () => (
                     description={project.description}
                     links={project.links}
                     demo={project.demo}
+                    technology={project.technology}
                 />
             ))}
         </section>
