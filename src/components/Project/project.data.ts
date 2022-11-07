@@ -13,8 +13,7 @@ export const ProjectData = [
                 url: 'https://github.com/mateuszslowinski/gamesBack',
             }
         ],
-
-
+        technology:['React', 'NestJS','Prisma']
     },
     {
         name: 'Tea Shop',
@@ -33,6 +32,8 @@ export const ProjectData = [
                 url: 'https://github.com/mateuszslowinski/teaShop-backend',
             }
         ],
+        technology:['React', 'ExpressJS','MongoDB']
+
     },
     {
         name: 'Mega Books',
@@ -49,5 +50,6 @@ export const ProjectData = [
                 url: 'https://github.com/mateuszslowinski/megakBooksBack',
             }
         ],
+        technology:['React', 'ExpressJS','MySQL']
     },
 ]
