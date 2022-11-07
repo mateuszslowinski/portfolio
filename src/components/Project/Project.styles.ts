@@ -55,7 +55,7 @@ export const LinksContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
-  margin: 0 auto 20px;
+  margin: 0 auto 10px;
 
   & div {
     display: flex;
@@ -76,4 +76,15 @@ export const LinksContainer = styled.div`
       }
     }
   }
+`
+export const TechnologyContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  & p {
+    color: #ddd;
+    font-size: 1.2rem;
+  }
+
 `
