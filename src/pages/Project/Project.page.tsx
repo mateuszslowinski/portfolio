@@ -11,18 +11,17 @@ export const ProjectPage = () => (
         transition={{duration: 0.4, ease: 'easeOut'}}
     >
         <h2>Dotychczasowe projekty</h2>
-        <div>
+        <section>
             {ProjectData.map(project => (
                 <ProjectCard
                     key={project.image}
                     name={project.name}
-                    image={project.image}
                     description={project.description}
                     links={project.links}
                     demo={project.demo}
-                    info={project.info}
+                    technology={project.technology}
                 />
             ))}
-        </div>
+        </section>
     </ProjectContainer>
 )

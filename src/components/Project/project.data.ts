@@ -1,10 +1,19 @@
 export const ProjectData = [
     {
-        name: 'Giereczkowo',
+        name: 'Games World',
         image: '/images/projectImages/Games-projekt.png',
         description: 'Aplikacja będzie ukazywać historie produkcji wydanych na poszczególne konsole.',
-        info: 'Prace trwają'
-
+        links: [
+            {
+                name: 'Frontend',
+                url: 'https://github.com/mateuszslowinski/gamesFront',
+            },
+            {
+                name: 'Backend',
+                url: 'https://github.com/mateuszslowinski/gamesBack',
+            }
+        ],
+        technology:['React', 'NestJS','Prisma']
     },
     {
         name: 'Tea Shop',
@@ -23,6 +32,8 @@ export const ProjectData = [
                 url: 'https://github.com/mateuszslowinski/teaShop-backend',
             }
         ],
+        technology:['React', 'ExpressJS','MongoDB']
+
     },
     {
         name: 'Mega Books',
@@ -39,5 +50,6 @@ export const ProjectData = [
                 url: 'https://github.com/mateuszslowinski/megakBooksBack',
             }
         ],
+        technology:['React', 'ExpressJS','MySQL']
     },
 ]

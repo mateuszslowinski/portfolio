@@ -1,6 +1,7 @@
 import {motion} from "framer-motion";
 import styled from "styled-components";
 import {device} from "../../constants/mediaQueries";
+import {GlobalThemeProps} from "../../types/layout.types";
 
 export const ProjectContainer = styled(motion.div)`
   display: flex;
@@ -10,17 +11,17 @@ export const ProjectContainer = styled(motion.div)`
   flex-wrap: wrap;
   text-align: center;
   min-height: calc(100vh - 110px);
-  
+
   & h2 {
     font-size: 3.5rem;
     color: #0B8BD4;
     margin: 10px;
   }
 
-  & div {
+  & section {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
   }
 `
@@ -28,51 +29,42 @@ export const ProjectContainer = styled(motion.div)`
 export const ProjectDetails = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 10px;
-  border: 1px solid #CFCFCF;
-  box-shadow: 0 0 38px -5px rgba(67, 67, 70, 1);
+  justify-content: space-between;
+  margin: 20px;
+  width: 80%;
+  box-shadow: 0 0 20px -5px rgba(60, 60, 70, 1);
+  min-height: 300px;
 
-  ${device.tablet} {
-    width: 40%;
-    min-height: 350px;
+  ${device.desktop} {
+    width: 24%;
   }
-  
+
   & h3 {
     font-size: 1.7rem;
-    margin: 10px 0;
-  }
-
-  & img {
-    width: 100%;
-    cursor: pointer;
-
-    ${device.tablet} {
-      width: 90%;
-    }
-
-    ${device.desktop} {
-      width: 70%;
-    }
+    margin: 10px auto 0;
+    padding: 10px;
+    color: ${({ theme }: GlobalThemeProps) => theme.backGroundColor}; ;
+    background-color:  ${({ theme }: GlobalThemeProps) => theme.weatheredColor};
   }
 
   & p {
-    margin: 15px 10px 10px;
     font-size: 1.2rem;
-    padding: 0 20px;
+    padding: 10px;
   }
 `
 
 export const LinksContainer = styled.div`
   display: flex;
-  margin-bottom: 20px;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto 10px;
 
-  & > div {
+  & div {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
     font-size: 1.5rem;
     margin: 5px;
 
@@ -86,4 +78,15 @@ export const LinksContainer = styled.div`
       }
     }
   }
+`
+export const TechnologyContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  & p {
+    color: ${({ theme }: GlobalThemeProps) => theme.weatheredColor};
+    font-size: 1.2rem;
+  }
+
 `
