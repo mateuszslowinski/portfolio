@@ -36,7 +36,7 @@ export const ProjectDetails = styled.div`
   min-height: 300px;
 
   ${device.desktop} {
-    width: 20%;
+    width: 24%;
   }
 
   & h3 {
