@@ -1,9 +1,19 @@
 export const ProjectData = [
     {
-        name: 'Giereczkowo',
+        name: 'Games World',
         image: '/images/projectImages/Games-projekt.png',
         description: 'Aplikacja będzie ukazywać historie produkcji wydanych na poszczególne konsole.',
-        info: 'Prace trwają'
+        links: [
+            {
+                name: 'Frontend',
+                url: 'https://github.com/mateuszslowinski/gamesFront',
+            },
+            {
+                name: 'Backend',
+                url: 'https://github.com/mateuszslowinski/gamesBack',
+            }
+        ],
+
 
     },
     {
