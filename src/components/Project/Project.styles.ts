@@ -1,6 +1,7 @@
 import {motion} from "framer-motion";
 import styled from "styled-components";
 import {device} from "../../constants/mediaQueries";
+import {GlobalThemeProps} from "../../types/layout.types";
 
 export const ProjectContainer = styled(motion.div)`
   display: flex;
@@ -42,7 +43,8 @@ export const ProjectDetails = styled.div`
     font-size: 1.7rem;
     margin: 10px auto 0;
     padding: 10px;
-    background-color: #333;
+    color: ${({ theme }: GlobalThemeProps) => theme.backGroundColor}; ;
+    background-color:  ${({ theme }: GlobalThemeProps) => theme.weatheredColor};
   }
 
   & p {
@@ -83,7 +85,7 @@ export const TechnologyContainer = styled.div`
   margin-bottom: 10px;
 
   & p {
-    color: #ddd;
+    color: ${({ theme }: GlobalThemeProps) => theme.weatheredColor};
     font-size: 1.2rem;
   }
 
