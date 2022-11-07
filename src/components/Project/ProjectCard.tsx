@@ -1,53 +1,31 @@
-import {useState} from "react";
-import {ImageModal} from "../Modal/ImageModal";
 import {AiFillGithub} from "react-icons/ai";
 import {BsEyeFill} from "react-icons/bs";
 import {LinksContainer, ProjectDetails} from "./Project.styles";
 
 interface Props {
     name: string
-    image: string
+    image?: string
     description: string
     links?: { name: string, url: string, }[]
     demo?: { url: string }
-    info?: string
 }
 
-export const ProjectCard = ({name, image, description, links, demo, info}: Props) => {
-    const [clickedImg, setClickedImg] = useState('')
-    const handleClick = (name: string) => {
-        setClickedImg(name)
-    };
-    const closeModal = () => {
-        if (clickedImg !== '') {
-            setClickedImg('')
-        }
-    }
-
-    return (
-        <ProjectDetails>
-            <h3>{name}</h3>
-            <img src={image} alt={`${name} zdjecie`} onClick={() => handleClick(name)}/>
-            <p>{description}</p>
-            <LinksContainer>
-                {links?.map(link => (
-                    <div key={link.url}>
-                        {link.name}
-                        <a href={link.url} target="_blank"><AiFillGithub/></a>
-                    </div>
-                ))}
-                {demo
-                    ? <div>Demo
-                        <a href={demo.url} target="_blank"><BsEyeFill/></a>
-                    </div>
-                    : null}
-                {info
-                    ? <div>{info}</div>
-                    : null}
-                {clickedImg
-                    ? <ImageModal image={image} onClick={closeModal}/>
-                    : null}
-            </LinksContainer>
-        </ProjectDetails>
-    )
-}
+export const ProjectCard = ({name, description, links, demo,}: Props) => (
+    <ProjectDetails>
+        <h3>{name}</h3>
+        <p>{description}</p>
+        <LinksContainer>
+            {links?.map(link => (
+                <div key={link.url}>
+                    {link.name}
+                    <a href={link.url} target="_blank"><AiFillGithub/></a>
+                </div>
+            ))}
+            {demo
+                ? <div>Demo
+                    <a href={demo.url} target="_blank"><BsEyeFill/></a>
+                </div>
+                : null}
+        </LinksContainer>
+    </ProjectDetails>
+)
