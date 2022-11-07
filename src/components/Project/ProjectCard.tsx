@@ -30,7 +30,7 @@ export const ProjectCard = ({name, description, links, demo, technology}: Props)
         </LinksContainer>
         <TechnologyContainer>
             {technology.map(name => (
-                <p>{name}</p>
+                <p key={name}>{name}</p>
             ))}
         </TechnologyContainer>
     </ProjectDetails>
