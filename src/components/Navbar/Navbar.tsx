@@ -8,7 +8,11 @@ interface Props {
 }
 
 export const Navbar = ({onClick, theme}: Props) => (
-    <NavbarContainer>
+    <NavbarContainer
+        initial={{opacity: 0, y: -180}}
+        animate={{opacity: 1, y: 0}}
+        transition={{ease: 'easeInOut', duration: 1}}
+    >
         <div>
             <NavLink to='/'><img src="/images/logo.png" alt="logo"/></NavLink>
             <ul>

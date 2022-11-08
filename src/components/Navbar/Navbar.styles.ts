@@ -1,13 +1,15 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import {device} from "../../constants/mediaQueries";
 import {GlobalThemeProps} from "../../types/layout.types";
 
-export const NavbarContainer = styled.div`
+export const NavbarContainer = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: #0B8BD4;
   padding: 5px;
+  width: 80%;
+  margin: 0 auto;
 
   & div > a:hover {
     padding: 0;
