@@ -1,15 +1,16 @@
+import {motion} from "framer-motion";
 import {technologyData} from "../../components/TechnologyCard/technology.data";
 import {ImagesContainer, TechnologyContainer} from "../../components/TechnologyCard/Technology.styles";
 import {TechnologyCard} from "../../components/TechnologyCard/TechnologyCard";
 
- const container = {
+const container = {
     show: {
         transition: {
             staggerChildren: 0.35,
         }
     }
 }
- const item = {
+const item = {
     hidden: {
         opacity: 0,
         x: 200,
@@ -39,38 +40,42 @@ export const TechnologyPage = () => (
         animate='show'
         exit='exit'
     >
-        <h2>Poznane technologie</h2>
-        <div>
+        <motion.h2
+            exit={{opacity: 0}}
+            transition={{ease: 'easeInOut', duration: 0.8}}
+        >Poznane technologie
+        </motion.h2>
+        <motion.div variants={item}>
             <h3>Jezyki Programowania</h3>
-            <ImagesContainer variants={item}>
+            <ImagesContainer>
                 {technologyData.language.map(item => (
                     <TechnologyCard key={item.image} name={item.name} image={item.image}/>
                 ))}
             </ImagesContainer>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div variants={item}>
             <h3>Frontend</h3>
-            <ImagesContainer variants={item}>
+            <ImagesContainer>
                 {technologyData.frontend.map(item => (
                     <TechnologyCard key={item.image} name={item.name} image={item.image}/>
                 ))}
             </ImagesContainer>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div variants={item}>
             <h3>Backend</h3>
             <ImagesContainer variants={item}>
                 {technologyData.backend.map(item => (
                     <TechnologyCard key={item.image} name={item.name} image={item.image}/>
                 ))}
             </ImagesContainer>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div variants={item}>
             <h3>Bazy danych</h3>
             <ImagesContainer variants={item}>
                 {technologyData.database.map(item => (
                     <TechnologyCard key={item.image} name={item.name} image={item.image}/>
                 ))}
             </ImagesContainer>
-        </div>
+        </motion.div>
     </TechnologyContainer>
 )

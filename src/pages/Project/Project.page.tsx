@@ -1,6 +1,7 @@
 import {ProjectCard} from "../../components/Project/ProjectCard";
 import {ProjectData} from "../../components/Project/project.data";
 import {ProjectContainer} from "../../components/Project/Project.styles";
+import {motion} from "framer-motion";
 
 const container = {
     show: {
@@ -39,7 +40,11 @@ export const ProjectPage = () => (
         animate='show'
         exit='exit'
     >
-        <h2>Dotychczasowe projekty</h2>
+        <motion.h2
+            exit={{opacity: 0}}
+            transition={{ease: 'easeInOut', duration: 0.8}}
+        >Dotychczasowe projekty
+        </motion.h2>
         <section>
             {ProjectData.map(project => (
                 <ProjectCard
