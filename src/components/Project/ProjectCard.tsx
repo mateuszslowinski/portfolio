@@ -9,10 +9,11 @@ interface Props {
     links?: { name: string, url: string, }[]
     demo?: { url: string }
     technology: string[]
+    variants: {}
 }
 
-export const ProjectCard = ({name, description, links, demo, technology}: Props) => (
-    <ProjectDetails>
+export const ProjectCard = ({name, description, links, demo, technology,variants}: Props) => (
+    <ProjectDetails variants={variants}>
         <h3>{name}</h3>
         <p>{description}</p>
         <LinksContainer>

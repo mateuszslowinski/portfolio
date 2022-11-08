@@ -26,7 +26,7 @@ export const ProjectContainer = styled(motion.div)`
   }
 `
 
-export const ProjectDetails = styled.div`
+export const ProjectDetails = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
