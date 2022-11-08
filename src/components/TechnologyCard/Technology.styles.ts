@@ -52,7 +52,7 @@ export const TechnologyContainer = styled(motion.div)`
   }
 `
 
-export const ImagesContainer = styled.div`
+export const ImagesContainer = styled(motion.div)`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
