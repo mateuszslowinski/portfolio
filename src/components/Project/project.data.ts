@@ -1,5 +1,23 @@
 export const ProjectData = [
     {
+        name: 'Paint Game',
+        image: '',
+        description: 'Paint game to prosta gra logiczna, której celem jest zapełnienie planszy jednym kolorem.',
+        demo: {
+            url: 'https://paint-game2k22.netlify.app/',
+        },
+        links: [
+            {
+                name: 'Github',
+                url: 'https://github.com/mateuszslowinski/paintGame',
+            },
+
+        ],
+        technology:['React']
+
+    },
+
+    {
         name: 'Games World',
         image: '/images/projectImages/Games-projekt.png',
         description: 'Aplikacja będzie ukazywać historie produkcji wydanych na poszczególne konsole.',
